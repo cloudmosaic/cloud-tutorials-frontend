@@ -7,7 +7,7 @@ import { Tasks } from './Tasks';
 
 const AppEntry = () => {
   return (
-    <Router basename="/mosaic/cloud-tutorials">
+    <Router basename="/docs/cloud-tutorials">
       <Route exact path="/">
         <App>
           <Catalog />
