@@ -25,7 +25,7 @@ export const Catalog: React.FC = () => {
 
   React.useEffect(() => {
     const load = async () => {
-      const allTutorials = await loadJSONTutorials("/apps/cloud-tutorials/");
+      const allTutorials = await loadJSONTutorials("/apps/cloud-tutorials");
       setTutorials(allTutorials);
     };
     load();

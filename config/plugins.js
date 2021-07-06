@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const AssetsPlugin = require('assets-webpack-plugin');
 
 module.exports = config => [
   require('@redhat-cloud-services/frontend-components-config/federated-modules')(
@@ -22,5 +23,9 @@ module.exports = config => [
     { from: path.resolve('node_modules/@patternfly/react-catalog-view-extension/dist/css/react-catalog-view-extension.css'), to: '' },
     { from: path.resolve('node_modules/@patternfly/patternfly/assets'), to: 'assets' }
   ]}),
+  new AssetsPlugin({
+    path: 'static',
+    removeFullPathAutoPrefix: true
+  }),
 ];
 
